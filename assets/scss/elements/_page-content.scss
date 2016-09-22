@@ -1,5 +1,12 @@
 .the-content {
-	@include padded-row( $width: rem-calc(980) );
+	&.template-part--wide {
+		@include padded-row();
+	}
+
+	&.template-part--narrow {
+		@include padded-row( $width: rem-calc(980) );
+	}
+
 	margin-top: rem-calc(40);
 	margin-bottom: rem-calc(40);
 

@@ -2,11 +2,18 @@
 
 $columns = get_sub_field( 'columns' );
 $layout = get_sub_field( 'layout' );
+$component_width = get_sub_field( 'width' );
+
+$wrapper_classes = array(
+	'columns',
+	'columns--' . $layout,
+	$component_width
+);
 
 if ( $columns ) :
 ?>
 
-<div class="columns columns--<?php echo $layout ?>">
+<div class="<?php echo join( ' ', $wrapper_classes ); ?>">
 	<?php foreach ( $columns as $column ) : ?>
 
 		<div class="columns__column">

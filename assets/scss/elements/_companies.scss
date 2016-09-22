@@ -1,5 +1,12 @@
 .companies {
-	@include grid-row();
+
+	@include padded-row();
+	width: 100%;
+
+	&.template-part--narrow {
+		@include padded-row( $width: rem-calc(980) )
+	}
+
 	margin-top: rem-calc(40);
 	margin-bottom: rem-calc(40);
 	padding-top: 1rem;

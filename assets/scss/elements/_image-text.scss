@@ -1,6 +1,12 @@
 .image-text,
 .text-image {
-	@include grid-row( $width: rem-calc(980) );
+	&.template-part--wide {
+		@include grid-row();
+	}
+
+	&.template-part--narrow {
+		@include grid-row( $width: rem-calc(980) )
+	}
 }
 
 .image-text {

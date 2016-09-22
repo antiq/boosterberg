@@ -1,7 +1,10 @@
 .columns {
 
-
 	@include grid-row();
+
+	&.template-part--narrow {
+		@include grid-row( $width: rem-calc(980) )
+	}
 
 	@include breakpoint( medium ) {
 		&--three {

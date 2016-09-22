@@ -50,7 +50,7 @@
 	<?php endif; ?>
 
 	<div class="entry-content">
-		<div class="the-content"><?php the_content(); ?></div>
+		<div class="the-content <?php echo get_post_meta( get_the_id(), 'content_width', true ); ?>"><?php the_content(); ?></div>
 		<?php
 			boosterberg_page_builder();
 		?>
