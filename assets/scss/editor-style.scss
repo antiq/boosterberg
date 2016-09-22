@@ -1,0 +1,30 @@
+@import "settings"; // foundation settings
+@import 'foundation';
+
+// Sass utilities
+@import 'util/util';
+
+@include foundation-global-styles;
+// @include foundation-grid;
+@include foundation-typography;
+@include foundation-button;
+
+@import "mixins/mixins-master";
+
+@import "media/media";
+@import "forms/forms";
+
+body#tinymce {
+	overflow-x: hidden;
+	background-color: #fff;
+	padding: 1rem !important;
+	height: auto;
+
+	p:first-of-type {
+		margin-top: 0;
+	}
+}
+
+#acf-editor-57d80d2f5c306_ifr body#tinymce {
+	text-align: center;
+}

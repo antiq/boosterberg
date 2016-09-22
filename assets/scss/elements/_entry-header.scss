@@ -1,0 +1,24 @@
+.entry-header {
+	position: relative;
+	padding: rem-calc(14) 0 rem-calc(10) 0;
+	background: $primary-color-light;
+
+	.has-post-thumbnail & {
+		margin-bottom: 5%;
+		@include breakpoint( xlarge ) {
+			margin-bottom: rem-calc(50);
+		}
+	}
+
+	.entry-title {
+		@include grid-col-row;
+	}
+
+	&__image {
+		display: block;
+		margin: 0 auto -5% auto;
+		@include breakpoint( xlarge ) {
+			margin-bottom: rem-calc(-50);
+		}
+	}
+}

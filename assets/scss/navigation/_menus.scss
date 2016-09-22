@@ -1,0 +1,150 @@
+.menu {
+	list-style: none;
+	margin-left: 0;
+
+	&--main {
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+
+		.menu-item {
+
+
+			@include breakpoint(medium) {
+				display: inline-block;
+			}
+
+			&.btn a {
+				// @include button( $background: $secondary-color, $background-hover: auto );
+				color: $secondary-color;
+				display: block;
+				@include breakpoint(medium) {
+					@include button( $background: $secondary-color, $background-hover: auto );
+					margin: 0 0 0 rem-calc(18);
+				}
+				@media screen and #{breakpoint(medium)} and (max-width: 800px) {
+					padding-left: rem-calc(12);
+					padding-right: rem-calc(12);
+					margin-left: 0;
+				}
+			}
+		}
+
+		a {
+			@include button( $background: white, $background-hover: $light-gray, $color: auto );
+			display: block;
+			border-bottom: 2px solid transparent;
+			color: $header-color;
+			font-weight: bold;
+
+			@include breakpoint( small only ) {
+				margin: rem-calc(4) 0;
+			}
+			@media screen and #{breakpoint(medium)} and (max-width: 800px) {
+				padding-left: rem-calc(12);
+				padding-right: rem-calc(12);
+			}
+		}
+	}
+
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a,
+	.current-menu-ancestor > a {
+	}
+}
+
+.primary-menu-wrap {
+	@include breakpoint( small only ) {
+		display: none;
+		position: absolute;
+		top: rem-calc(76);
+		left: 0;
+		width: 100%;
+		padding: rem-calc(12) 1rem rem-calc(12) 1rem;
+		background: white;
+		text-align: center;
+		z-index: 0;
+		box-shadow: 0 2px 3px rgba(0,0,0,.3);
+		.logged-in & {
+			top: rem-calc(122);
+		}
+	}
+	@include breakpoint( medium ) {
+		display: block !important;
+		position: relative;
+		z-index: 2;
+	}
+
+	&.mui-enter {
+		@include mui-slide (
+			$state: in,
+			$direction: down,
+			$amount: 100%,
+			$fade: false,
+			$duration: 300ms,
+			$timing: ease
+		)
+	}
+	&.mui-leave {
+		@include mui-slide (
+			$state: out,
+			$direction: up,
+			$amount: 100%,
+			$fade: true,
+			$duration: 300ms,
+			$timing: ease
+		)
+	}
+}
+
+// /* Small menu. */
+// .menu-toggle,
+// .main-navigation.toggled .menu {
+// 	display: block;
+// }
+
+.menu-toggle {
+	@include button( $style: 'hollow' );
+	margin: 0;
+	position: relative;
+	z-index: 2;
+	transition: 200ms padding ease-out;
+	&.toggled {
+		// @include button();
+		// margin: 0;
+		padding-left: rem-calc(30);
+		padding-right: rem-calc(18);
+		&:before {
+			position: absolute;
+			left: rem-calc(13);
+			top: rem-calc(7);
+			content: '×';
+			font-weight: bold;
+		}
+	}
+	@include breakpoint(medium) {
+		display: none;
+	}
+}
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+
+	.site-main & {
+		margin: 0 0 1.5em;
+		overflow: hidden;
+	}
+
+	.nav-previous {
+		float: left;
+		width: 50%;
+	}
+
+	.nav-next {
+		float: right;
+		text-align: right;
+		width: 50%;
+	}
+}

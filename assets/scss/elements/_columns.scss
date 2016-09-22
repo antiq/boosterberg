@@ -1,0 +1,60 @@
+.columns {
+
+
+	@include grid-row();
+
+	@include breakpoint( medium ) {
+		&--three {
+			@include grid-layout(3, '.columns__column');
+		}
+
+		&--four {
+			@include grid-layout(4, '.columns__column');
+		}
+	}
+
+	&__column {
+		@include grid-col;
+		margin-top: rem-calc(40);
+		margin-bottom: rem-calc(40);
+		@include breakpoint( small only ) {
+			text-align: center;
+		}
+	}
+
+	&__link {
+		color: $body-font-color;
+		&:hover {
+			color: $body-font-color;
+			.columns__button .icon {
+				padding-left: rem-calc(20);
+			}
+			.columns__image {
+				box-shadow: 0 1px 2px rgba(0,0,0,.2);
+			}
+		}
+	}
+
+	&__image {
+		border-radius: 9px;
+		border: 1px solid $primary-color-medium;
+	}
+
+	&__title {
+		font-size: rem-calc(18);
+		margin: rem-calc(28) 0 rem-calc(18) 0;
+	}
+
+	&__button {
+		color: $primary-color;
+		.icon {
+			display: inline-block;
+			width: rem-calc(24);
+			vertical-align: middle;
+			padding-left: rem-calc(4);
+			fill: $primary-color;
+			transition: 250ms padding ease-out;
+		}
+	}
+
+}

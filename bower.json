@@ -1,0 +1,8 @@
+{
+  "name": "boosterberg-foundation-sites",
+  "version": "0.0.1",
+  "dependencies": {
+    "foundation-sites": "latest",
+    "motion-ui": "latest"
+  }
+}

@@ -1,0 +1,55 @@
+.companies {
+	@include grid-row();
+	margin-top: rem-calc(40);
+	margin-bottom: rem-calc(40);
+	padding-top: 1rem;
+
+	&__title {
+
+		font-size: rem-calc(20);
+		strong {
+			display: block;
+			color: $primary-color;
+		}
+
+		@include breakpoint( small only ) {
+			text-align: center;
+		}
+
+		@include breakpoint( medium ) {
+			@include grid-col(3);
+			padding: rem-calc(24) rem-calc(24);
+		}
+
+		@include breakpoint( large ) {
+			padding: rem-calc(24) rem-calc(24);
+		}
+
+	}
+
+	&__list {
+		list-style-type: none;
+		margin-left: 0;
+		text-align: left;
+
+		@include breakpoint( medium ) {
+			@include grid-col(9, 0);
+
+		}
+	}
+
+	&__item {
+
+		float: left;
+		width: 33%;
+		padding: rem-calc(8) 1rem;
+		box-sizing: border-box;
+		text-align: center;
+
+		@include breakpoint( small only ) {
+			padding: rem-calc(8) 0;
+		}
+
+	}
+
+}

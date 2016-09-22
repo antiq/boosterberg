@@ -1,0 +1,51 @@
+.image-text,
+.text-image {
+	@include grid-row( $width: rem-calc(980) );
+}
+
+.image-text {
+//	margin-top: rem-calc(40);
+	margin-bottom: rem-calc(40);
+	&__title {
+		@include grid-col;
+		margin-bottom: rem-calc(40);
+		@include breakpoint( small only ) {
+			text-align: center;
+		}
+	}
+
+	&__image {
+		@include grid-col;
+		text-align: center;
+
+		@include breakpoint( medium ) {
+			@include grid-column-size( 6 );
+			.text-image & {
+				@include grid-column-position( 6 );
+			}
+		}
+
+	}
+
+	&__img {
+		border: 1px solid $primary-color;
+		border-radius: 9px;
+	}
+
+	&__content {
+		@include grid-col;
+		margin-top: rem-calc(0);
+		margin-bottom: rem-calc(40);
+
+		@include breakpoint( medium ) {
+			@include grid-column-size( 6 );
+			.text-image & {
+				@include grid-column-position( -6 );
+			}
+		}
+
+		@include breakpoint( large ) {
+		}
+	}
+
+}

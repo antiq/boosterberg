@@ -1,0 +1,27 @@
+.site-header {
+	@include grid-col-row;
+}
+
+.content-area {
+}
+
+.entry-content {
+	@include clearfix;
+	width: 100%;
+}
+
+.site-main {
+}
+
+.site-content .widget-area {
+}
+
+.site-footer {
+	padding: 2rem 0 1rem 0;
+	background: $primary-color-light;
+	text-align: center;
+}
+
+.site-info {
+	font-size: rem-calc(14);
+}
