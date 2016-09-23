@@ -36,6 +36,9 @@
 	&__img {
 		border: 1px solid $primary-color-light;
 		border-radius: 9px;
+		@include breakpoint( small only ) {
+			margin-bottom: rem-calc(40);
+		}
 	}
 
 	&__content {

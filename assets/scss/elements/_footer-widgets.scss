@@ -1,8 +1,11 @@
 .footer-widgets {
 	@include grid-row;
 	margin-bottom: 2rem;
-	width: 100%;
+	width: 80%;
 	text-align: left;
+	@include breakpoint( small only ) {
+			text-align: center;
+	}
 }
 
 .footer-widget {
