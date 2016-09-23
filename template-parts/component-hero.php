@@ -10,7 +10,7 @@ $content = get_sub_field( 'content' );
 <div class="hero">
 
 	<div class="hero__row">
-		<h1 class="hero__title"><span><?php echo $title; ?></span></h1>
+		<h1 class="hero__title"><?php echo $title; ?></h1>
 		<div class="hero__video-wrap">
 			<div class="hero__animation-control">
 				<div class="hero__video-toolbar"></div>
