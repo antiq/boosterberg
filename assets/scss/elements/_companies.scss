@@ -14,22 +14,11 @@
 	&__title {
 
 		font-size: rem-calc(20);
+		display: block;
+		text-align:center;
 		strong {
-			display: block;
+			
 			color: $primary-color;
-		}
-
-		@include breakpoint( small only ) {
-			text-align: center;
-		}
-
-		@include breakpoint( medium ) {
-			@include grid-col(3);
-			padding: rem-calc(24) rem-calc(24);
-		}
-
-		@include breakpoint( large ) {
-			padding: rem-calc(24) rem-calc(24);
 		}
 
 	}
@@ -40,7 +29,7 @@
 		text-align: left;
 
 		@include breakpoint( medium ) {
-			@include grid-col(9, 0);
+			@include grid-col(12, 0);
 
 		}
 	}

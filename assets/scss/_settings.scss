@@ -56,8 +56,9 @@ $foundation-palette: (
   alert: #ec5840,
 );
 $primary-color-light: #def4ff;
-$primary-color-lighter: #e3f6ff;
-$primary-color-medium: #82caf5;
+$primary-color-lighter: #eaf9ff;
+$primary-color-medium: #69acd3;
+$primary-color-mediumer: #94caea;
 $secondary-color-light: #ff9955;
 $light-gray: #e6e6e6;
 $medium-gray: #cacaca;
@@ -65,12 +66,13 @@ $dark-gray: #8a8a8a;
 $black: #0a0a0a;
 $white: #fefefe;
 $body-background: $white;
-$body-font-color: #444;
+$body-font-color: #777;
 $body-font-family: 'Roboto', Helvetica, sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
 $global-weight-normal: normal;
+$global-weight-semibold: 500;
 $global-weight-bold: bold;
 $global-radius: 5px;
 $global-text-direction: ltr;
@@ -107,8 +109,8 @@ $block-grid-max: 8;
 // 4. Base Typography
 // ------------------
 
-$header-font-family: 'Open Sans Condensed', Helvetica, Arial, sans-serif;
-$header-font-weight: $global-weight-bold;
+$header-font-family: 'Fira Sans', Helvetica, Arial, sans-serif;
+$header-font-weight: $global-weight-semibold;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
 $header-sizes: (

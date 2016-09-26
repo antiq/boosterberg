@@ -1,7 +1,7 @@
 .entry-header {
 	position: relative;
 	padding: rem-calc(14) 0 rem-calc(10) 0;
-	background: $primary-color-light;
+	background: linear-gradient($primary-color, $primary-color-medium);
 
 	.has-post-thumbnail & {
 		margin-bottom: 5%;
@@ -12,6 +12,7 @@
 
 	.entry-title {
 		@include grid-col-row;
+		color: white;
 	}
 
 	&__image {
