@@ -1,6 +1,6 @@
 .site {
 	@include breakpoint( medium ) {
-		padding-top: rem-calc(105);
+		padding-top: rem-calc(136);
 	}
 }
 
@@ -29,6 +29,7 @@
 }
 
 .site-header {
+	float: none !important;
 	position: relative;
 	background: white;
 	padding-top: 1rem;
@@ -51,6 +52,33 @@
 		@include breakpoint( medium ) {
 			padding-top: 0;
 			padding-bottom: 0;
+		}
+	}
+}
+
+.menu-top-menu-container {
+	background: $primary-color;
+	height: rem-calc(32);
+	position: relative;
+	z-index: 10;
+	transition: 250ms height ease-out;
+	.is-stuck & {
+		@include breakpoint( medium ) {
+			height: 0;
+		}
+	}
+	.menu {
+		@include grid-row;
+		width: 100%;
+		margin-bottom: 0;
+		text-align: right;
+	}
+	.menu-item {
+		display: inline-block;
+		a {
+			display: block;
+			padding: rem-calc(3) 1rem;
+			color: white;
 		}
 	}
 }
