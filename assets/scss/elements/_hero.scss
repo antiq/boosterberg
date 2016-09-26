@@ -4,13 +4,14 @@
 
 	&__title {
 		@include grid-col-row();
-		max-width: rem-calc(720);
+		max-width: rem-calc(800);
 		margin: rem-calc(8) auto rem-calc(20) auto;
 		text-align: center;
-		font-size: rem-calc(20);
+		font-size: rem-calc(26);
+		color: white;
 
 		@include breakpoint(medium) {
-			font-size: rem-calc(26);
+			font-size: rem-calc(30);
 		}
 	}
 
@@ -24,7 +25,7 @@
 			@include mui-slide (
 				$state: in,
 				$direction: up,
-				$amount: 15%,
+				$amount: 8%,
 				$fade: true,
 				$duration: 1200ms,
 				$timing: ease
@@ -49,7 +50,7 @@
 		margin-bottom: 4rem;
 		padding: 1rem rem-calc(15) 0 rem-calc(15);
 		//background: $primary-color-light;
-		background: linear-gradient($primary-color-medium, $primary-color-lighter);
+		background: linear-gradient($primary-color, $primary-color-medium);
 
 
 		&-row {
@@ -131,7 +132,7 @@
 	}
 
 	&__content {
-		max-width: rem-calc(680);
+		max-width: rem-calc(760);
 		margin: 0 auto;
 		padding: 0 rem-calc(15);
 		text-align: center;
@@ -142,22 +143,24 @@
 		}
 
 		h3 {
-			font-size: rem-calc(20);
+			font-size: rem-calc(22);
 			margin-bottom: 1em;
 		}
 
 		h4 {
-			font-size: rem-calc(18);
+			font-size: rem-calc(20);
 			margin-bottom: 1em;
 		}
 
 		p {
+			font-size:  rem-calc(18);
 			margin-bottom: rem-calc(24);
 		}
 
 		.button {
 			margin-left: rem-calc(15);
 			margin-right: rem-calc(15);
+			font-weight: $global-weight-bold;
 
 			@media only screen and (max-width: rem-calc(400)) {
 				margin-left: rem-calc(5);

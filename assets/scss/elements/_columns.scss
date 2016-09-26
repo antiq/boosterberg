@@ -20,6 +20,9 @@
 		@include grid-col;
 		margin-top: rem-calc(40);
 		margin-bottom: rem-calc(40);
+		/*&:hover {
+			background-color: $primary-color-light;
+		}*/
 		@include breakpoint( small only ) {
 			text-align: center;
 		}
@@ -32,15 +35,15 @@
 			.columns__button .icon {
 				padding-left: rem-calc(20);
 			}
-			.columns__image {
+			/*.columns__image {
 				box-shadow: 0 1px 2px rgba(0,0,0,.2);
-			}
+			}*/
 		}
 	}
 
 	&__image {
 		border-radius: 9px;
-		border: 1px solid $primary-color-medium;
+		border: 3px solid $primary-color-light;
 	}
 
 	&__title {
@@ -50,6 +53,7 @@
 
 	&__button {
 		color: $primary-color;
+		padding-bottom: rem-calc(6);
 		.icon {
 			display: inline-block;
 			width: rem-calc(24);

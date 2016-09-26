@@ -19,4 +19,10 @@
 	&__title {
 		font-size: rem-calc(14);
 	}
+	& a {
+		color: white;
+		&:hover {
+			color: $primary-color-light;
+		}
+	}
 }
