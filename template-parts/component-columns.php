@@ -12,7 +12,7 @@ $wrapper_classes = array(
 
 if ( $columns ) :
 ?>
-
+<div class="abovecolumns">
 <div class="<?php echo join( ' ', $wrapper_classes ); ?>">
 	<?php foreach ( $columns as $column ) : ?>
 
@@ -34,7 +34,7 @@ if ( $columns ) :
 						<div class="columns__text">
 							<?php echo apply_filters( 'the_content', $column['content'] ); ?>
 							<?php if ( ! empty( $column['link_title'] ) && ! empty( $column['link_url'] ) ) : ?>
-								<button type="button" class="columns__button">
+								<button type="button" class="columns__button button hollow">
 									<?php echo $column['link_title']; ?>
 									<?php echo boosterberg_get_icon( 'arrow-right' ); ?>
 								</button>
@@ -50,5 +50,5 @@ if ( $columns ) :
 
 	<?php endforeach; ?>
 </div>
-
+</div>
 <?php endif;

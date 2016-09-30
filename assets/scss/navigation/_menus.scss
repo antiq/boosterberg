@@ -2,6 +2,13 @@
 	list-style: none;
 	margin-left: 0;
 
+	&--top {
+		max-width: 100%!important;
+		& a {
+			color: white!important;
+		}
+	}
+
 	&--main {
 		list-style: none;
 		margin: 0;
@@ -31,8 +38,9 @@
 		}
 
 		a {
-			@include button( $background: white, $background-hover: $light-gray, $color: auto );
+			@include button( $background: white, $background-hover: $primary-color-lighter, $color: auto );
 			display: block;
+			padding-bottom: 7px;
 			border-bottom: 2px solid transparent;
 			color: $header-color;
 			font-weight: bold;
@@ -51,6 +59,7 @@
 	.current-menu-item > a,
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a {
+		color: $primary-color;
 	}
 }
 
@@ -118,7 +127,7 @@
 		&:before {
 			position: absolute;
 			left: rem-calc(13);
-			top: rem-calc(7);
+			top: rem-calc(8);
 			content: '×';
 			font-weight: bold;
 		}

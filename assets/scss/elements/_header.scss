@@ -87,6 +87,9 @@
 	margin: 0;
 	font-size: rem-calc(24);
 	font-weight: bold;
+	& img {
+		max-width: rem-calc(210);
+	}
 }
 
 .site-branding {
