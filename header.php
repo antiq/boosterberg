@@ -12,17 +12,32 @@
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
+<meta property="og:title" content="Boosterberg - Smart solution for your Facebook post boosting" />
+<meta property="og:url" content="http://boosterberg.com/?utm_source=facebook&utm_campaign=FB-plugin&utm_medium=FB-share&utm_content=web-button" />
+<meta property="og:description" content="If you spend too much time with manual clicking to boost your Facebook posts, try Boosterberg, save time and increase productivity and efficiency." />
+<meta property="fb:app_id" content="1560989787508846" />
+<meta property="og:type" content="article" />
+<meta property="og:image" content="http://boosterberg.com/wp-content/uploads/2016/10/boosterberg-facebook-post-boosting-i.png" />
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
 <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.8&appId=1560989787508846";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<?php if ( function_exists( 'gtm4wp_the_gtm_tag' ) ) { gtm4wp_the_gtm_tag(); } ?>
 <div id="page" class="site">
+<div style="margin:0;padding:0;background-color:#3d8dbc;width:100%;height:200px;z-index:-1;position:absolute;top:0;">&nbsp;</div>
 	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'boosterberg' ); ?></a>
 	<div class="sticky-header">
 		<?php wp_nav_menu( array( 'theme_location' => 'top', 'menu_id' => 'top-menu', 'menu_class' => 'menu menu--top', 'depth' => 1, 'fallback_cb' => false ) ); ?>

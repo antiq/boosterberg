@@ -52,3 +52,20 @@ require get_template_directory() . '/inc/jetpack.php';
  * Widget areas.
  */
 require get_template_directory() . '/inc/widget-areas.php';
+
+/* Add youtube hero video url params */
+add_filter('oembed_result', 'hero_oembed', 10, 3);
+function hero_oembed($html, $url, $args)
+{
+  return str_replace('?feature=oembed', '?feature=oembed&rel=0&showinfo=0&iv_load_policy=3', $html);
+}
+
+/* Facebook into menu integration */
+add_filter( 'wp_nav_menu_items', 'add_facebook_button_nav_menu', 10, 2 );
+
+function add_facebook_button_nav_menu( $menu, stdClass $args ){
+	if ( 'top' != $args->theme_location )
+	return $menu;
+	$menu .= sprintf( '<li style="margin-left:12px;position:relative;top:1px;" class="fb-like" data-href="http://boosterberg.com" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true" data-colorscheme="dark"></li>' );
+	return $menu;
+}

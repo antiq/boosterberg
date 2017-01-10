@@ -18,8 +18,9 @@ if ( $columns ) :
 
 		<div class="columns__column">
 
-			<?php if ( ! empty( $column['link_title'] ) && ! empty( $column['link_url'] ) ) : ?>
-				<a href="<?php echo get_permalink( $column['link_url'] ); ?>" class="columns__link" title="<?php echo get_the_title( $column['link_url'] ); ?>">
+			<?php if ( ! empty( $column['link_title'] ) && ! empty( $column['link_url'] ) ) :
+        $link = $column['link_url']; if(is_numeric($link)) $link = get_permalink($link); ?>
+				<a href="<?php echo $link; ?>" class="columns__link" title="<?php echo get_the_title( $column['link_url'] ); ?>">
 			<?php endif; ?>
 
 					<?php echo wp_get_attachment_image( $column['image'], 'medium', false, array( 'class' => 'columns__image'  ) ); ?>
