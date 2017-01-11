@@ -1,1 +1,34 @@
 @import "menus";
+
+.nav-links {
+  @include padded-row( rem-calc(980) );
+	.nav-previous,
+	.nav-next {
+		margin-bottom: 1rem;
+		position: relative;
+	}
+	a {
+		display: block;
+	}
+	.nav-previous a {
+		&:before {
+      content: '< ';
+    }
+	}
+	.nav-next a {
+		text-align: right;
+    &:after {
+      content: ' >';
+    }
+	}
+	@include breakpoint(medium) {
+		.nav-previous {
+			float: left;
+			width: 48%;
+		}
+		.nav-next {
+			float: right;
+			width: 48%;
+		}
+	}
+}

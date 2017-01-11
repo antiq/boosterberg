@@ -25,7 +25,8 @@
 	}
 }
 
-.blog {
+.blog,
+.archive {
 	.post {
 		@include padded-row( rem-calc(980) );
 		margin-bottom: 2rem;
