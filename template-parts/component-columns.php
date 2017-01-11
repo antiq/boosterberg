@@ -12,7 +12,7 @@ $wrapper_classes = array(
 
 if ( $columns ) :
 ?>
-<div class="abovecolumns">
+
 <div class="<?php echo join( ' ', $wrapper_classes ); ?>">
 	<?php foreach ( $columns as $column ) : ?>
 
@@ -51,5 +51,5 @@ if ( $columns ) :
 
 	<?php endforeach; ?>
 </div>
-</div>
+
 <?php endif;

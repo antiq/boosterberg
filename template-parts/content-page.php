@@ -43,7 +43,7 @@
 			</div>
 		</header>
 	<?php else : ?>
-		<header class="entry-header">
+		<header class="page-header">
 			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 			<?php the_post_thumbnail( 'full', array( 'class' => 'entry-header__image') ); ?>
 		</header><!-- .entry-header -->

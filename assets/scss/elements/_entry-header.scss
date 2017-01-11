@@ -1,4 +1,6 @@
-.entry-header {
+.single-post .entry-header,
+.page-header {
+
 	position: relative;
 	padding: rem-calc(14) 0 rem-calc(10) 0;
 	background: linear-gradient($primary-color, $primary-color-medium);
@@ -10,7 +12,7 @@
 		}
 	}
 
-	.entry-title {
+	.page-title {
 		@include grid-col-row;
 		color: white;
 	}
@@ -22,4 +24,20 @@
 			margin-bottom: rem-calc(-50);
 		}
 	}
+
+
+}
+
+.single-post {
+	.entry-title {
+		@include padded-row( rem-calc(980) );
+		width: 100%;
+		color: white;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.blog .page-header {
+	margin-bottom: 2rem;
 }

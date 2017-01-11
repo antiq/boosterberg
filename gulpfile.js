@@ -14,7 +14,7 @@ var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var uglify = require('gulp-uglify');
 // var imagemin = require('gulp-imagemin');
-var URL = 'localhost';
+var URL = 'boosterberg.dev';
 
 // Paths
 var paths = {

@@ -8,15 +8,63 @@
 .entry-content {
 	@include clearfix;
 	width: 100%;
+	.single-post & {
+		@include padded-row( rem-calc(980) );
+	}
 }
 
-.site-main {
+.entry-meta {
+	margin-bottom: 1rem;
+	.updated {
+		display: none;
+	}
+	.single-post & {
+		@include padded-row( rem-calc(980) );
+		width: 100%;
+		margin-top: 1rem;
+	}
+}
+
+.blog {
+	.post {
+		@include padded-row( rem-calc(980) );
+		margin-bottom: 2rem;
+	}
+	.has-post-thumbnail {
+		.excerpt {
+			@include breakpoint(medium) {
+				@include grid-col(7, 0);
+
+			}
+		}
+
+	}
+	.thumbnail {
+		@include breakpoint(medium) {
+			@include grid-col(5, rem-calc(40));
+			.wp-post-image {
+				margin-top: rem-calc(8);
+				border-radius: 9px;
+				border: 1px solid $primary-color;
+			}
+		}
+	}
+}
+
+.single-post {
+	.entry-footer {
+		@include padded-row( rem-calc(980) );
+		width: 100%;
+	}
+
 }
 
 .site-content .widget-area {
 }
 
 .site-footer {
+	@include clearfix;
+	width: 100%;
 	padding: 2rem 0 1rem 0;
 	background: $primary-color-medium;
 	color: white;

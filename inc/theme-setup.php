@@ -77,3 +77,8 @@ function boosterberg_content_width() {
 	$GLOBALS['content_width'] = apply_filters( 'boosterberg_content_width', 640 );
 }
 add_action( 'after_setup_theme', 'boosterberg_content_width', 0 );
+
+function boosterberg_excerpt_length( $length ) {
+	return 75;
+}
+add_filter( 'excerpt_length', 'boosterberg_excerpt_length', 999 );
