@@ -72,6 +72,8 @@
 			position: relative;
 			background: white;
 			line-height: rem-calc(26);
+			border: 1px solid $primary-color-medium;
+			border-radius: 9px 9px 0 0;
 
 			&__control {
 				display: inline-block;
@@ -86,10 +88,12 @@
 
 		&-wrap {
 			@include flex-video( 16 by 9 );
-			margin: 0;
+			margin: -1px 0 0 0;
 			background: white;
 			border-radius: 0 0 8px 8px;
 			-webkit-transform: rotate(0.000001deg); /*mac os 10.6 safari 5 border-radius-bug */
+			border: 1px solid $primary-color-medium;
+			border-radius: 0 0 9px 9px;
 
 			iframe {
 

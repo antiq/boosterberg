@@ -15,6 +15,7 @@
 	.page-title {
 		@include grid-col-row;
 		color: white;
+		font-size: rem-calc(32);
 	}
 
 	&__image {
@@ -38,7 +39,6 @@
 	}
 }
 
-.blog .page-header,
-.archive .page-header {
+.page-header {
 	margin-bottom: 2rem;
 }

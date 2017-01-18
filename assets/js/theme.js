@@ -1,14 +1,6 @@
 jQuery(document).ready(function($) {
 	$(document).foundation();
 
-	Foundation.Motion.animateIn(
-		$('.hero__animation-control'),
-		'animate',
-		function() {
-			this.addClass( 'done' );
-		}
-	);
-
 	var stickyHeader = $('.sticky-header');
 
 	$(window).on( 'scroll', Foundation.util.throttle( function(e){

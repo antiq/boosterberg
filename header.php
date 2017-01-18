@@ -37,7 +37,6 @@
 }(document, 'script', 'facebook-jssdk'));</script>
 <?php if ( function_exists( 'gtm4wp_the_gtm_tag' ) ) { gtm4wp_the_gtm_tag(); } ?>
 <div id="page" class="site">
-<div style="margin:0;padding:0;background-color:#3d8dbc;width:100%;height:131px;z-index:-1;position:absolute;top:0;">&nbsp;</div>
 	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'boosterberg' ); ?></a>
 	<div class="sticky-header">
 		<?php wp_nav_menu( array( 'theme_location' => 'top', 'menu_id' => 'top-menu', 'menu_class' => 'menu menu--top', 'depth' => 1, 'fallback_cb' => false ) ); ?>

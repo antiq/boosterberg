@@ -22,7 +22,6 @@
 			<div class="hero__video">
 				<h1 class="hero__title"><?php echo $hero_title; ?></h1>
 				<div class="hero__video-row">
-					<div class="hero__animation-control">
 						<div class="hero__video-toolbar">
 							<span class="hero__video-toolbar__control"></span>
 							<span class="hero__video-toolbar__control"></span>
@@ -31,8 +30,7 @@
 						<div class="hero__video-wrap">
 							<?php echo wp_oembed_get( $hero_video, array( 'width' => 560 ) ); ?>
 						</div>
-					</div>
-				</div>
+			</div>
 				<div class="hero__background">
 				</div>
 				<?php echo wp_get_attachment_image( $hero_background_image, 'full', false, array( 'class' => 'hero__background__image') ); ?>
@@ -44,7 +42,7 @@
 		</header>
 	<?php else : ?>
 		<header class="page-header">
-			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+			<?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
 			<?php the_post_thumbnail( 'full', array( 'class' => 'entry-header__image') ); ?>
 		</header><!-- .entry-header -->
 	<?php endif; ?>

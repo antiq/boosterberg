@@ -1,6 +1,6 @@
 .footer-widgets {
 	@include grid-row;
-	
+
 	margin-bottom: 2rem;
 	width: 80%;
 	text-align: left;
@@ -14,7 +14,10 @@
 	margin: 1rem 0;
 	font-size: rem-calc(14);
 	@include breakpoint( medium ) {
-		@include grid-col(4);
+		@include grid-col(6);
+	}
+	@include breakpoint( medium-large ) {
+		@include grid-col(3);
 	}
 
 	&__title {
