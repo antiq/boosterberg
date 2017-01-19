@@ -10,7 +10,7 @@
 		top: 0;
 		width: 100%;
 		z-index: 200;
-		background: $primary-color-medium;
+		background: $primary-color;
 		transition: 250ms box-shadow ease-out;
 
 		&.is-stuck {
