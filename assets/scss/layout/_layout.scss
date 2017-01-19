@@ -15,7 +15,7 @@
 
 .entry-meta {
 	margin-bottom: 1rem;
-	.updated {
+	.updated:not(.published) {
 		display: none;
 	}
 	.single-post & {
