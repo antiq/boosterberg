@@ -87,7 +87,7 @@
 		}
 
 		&-wrap {
-			@include flex-video( 16 by 9 );
+			@include responsive-embed( 16 by 9 );
 			margin: -1px 0 0 0;
 			background: white;
 			border-radius: 0 0 8px 8px;

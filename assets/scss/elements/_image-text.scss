@@ -5,7 +5,7 @@
 	}
 
 	&.template-part--narrow {
-		@include grid-row( $width: rem-calc(980) )
+		@include grid-row( $size: rem-calc(980) )
 	}
 }
 

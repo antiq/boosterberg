@@ -24,7 +24,7 @@
 }
 
 @mixin padded-row( $width: $global-width ) {
-	@include grid-row( $width: $width );
+	@include grid-row( $size: $width );
 	@each $breakpoint, $value in $grid-column-gutter {
 		$padding: rem-calc($value) / 2;
 
