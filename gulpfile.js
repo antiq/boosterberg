@@ -49,8 +49,6 @@ var paths = {
 //        'bower_components/foundation-sites/js/foundation.tabs.js',
         'bower_components/foundation-sites/js/foundation.toggler.js',
 //        'bower_components/foundation-sites/js/foundation.tooltip.js',
-        'assets/js/navigation.js',
-        'assets/js/skip-link-focus-fix.js',
         'assets/js/theme.js',
         ],
     copyScripts: [
@@ -141,9 +139,6 @@ gulp.task('copyScripts', function() {
 gulp.task('copyScripts-build', function() {
     return gulp.src(paths.copyScripts)
         .pipe(flatten())
-        .pipe(uglify({
-            outSourceMap: true
-        }))
         .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest('dist/js/'));
 });
@@ -167,7 +162,6 @@ gulp.task('vendorStyles', function() {
 gulp.task('concat-dev', function() {
   gulp.src( paths.scripts )
     .pipe(plumber())
-    .pipe(babel())
     .pipe(concat('theme.js'))
     .pipe(gulp.dest('dist/js'))
     .pipe(browserSync.stream({match: '**/*.js'}));
@@ -176,11 +170,7 @@ gulp.task('concat-dev', function() {
 gulp.task('concat-build', function() {
   gulp.src( paths.scripts )
     .pipe(plumber())
-    .pipe(babel())
     .pipe(concat('theme.js'))
-    .pipe(uglify({
-        outSourceMap: true
-    }))
     .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest('dist/js'))
 });
